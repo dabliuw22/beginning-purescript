@@ -1,0 +1,42 @@
+# Beginning Purescript
+
+## Init
+```shell
+$ npm init
+$ spago init
+```
+
+## Install Purescript Dependencies
+```shell
+$ spago install arrays
+$ spago install lists
+$ spago install math
+$ spago install datetime
+$ spago install generics-rep
+$ spago install aff
+$ spago install node-fs-aff
+$ spago install affjax
+$ spago install parallel
+```
+
+## Apply Formatter
+```shell
+$ npm install purty -g
+$ purty src/Main.purs --write
+```
+
+## Run Repl
+```shell
+$ npx spago repl # for project
+$ spago repl # global
+```
+
+## Build 
+```shell
+$ spago build
+```
+
+# Run
+```shell
+$ spago run # or node -e "require ('./output/Main/index').main()"
+```
