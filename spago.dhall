@@ -10,8 +10,10 @@
   , "lists"
   , "math"
   , "node-fs-aff"
+  , "now"
   , "parallel"
   , "psci-support"
+  , "random"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
