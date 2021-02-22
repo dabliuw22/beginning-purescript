@@ -12,6 +12,8 @@ $ spago install arrays
 $ spago install lists
 $ spago install math
 $ spago install datetime
+$ spago install now
+$ spago install random
 $ spago install generics-rep
 $ spago install aff
 $ spago install node-fs-aff
