@@ -10,6 +10,7 @@ import Effect (Effect)
 import Effect.Aff (Aff, joinFiber, forkAff, launchAff_)
 import Effect.Class.Console as Console
 import Effect.Console (log)
+import Effect.Now as Now
 import Typeclass (class Counter, count)
 
 data Command
@@ -67,6 +68,8 @@ main = do
   case maybeSum of
     Just v -> log $ show v
     _ -> log "Empty"
+  now <- Now.nowDateTime
+  log $ show now
   launchAff_ do
     runAsync
 
