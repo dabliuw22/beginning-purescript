@@ -7,7 +7,7 @@ import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
-import Effect.Aff (Aff, joinFiber, forkAff, launchAff_)
+import Effect.Aff (Aff, forkAff, joinFiber, launchAff, launchAff_)
 import Effect.Class.Console as Console
 import Effect.Console (log)
 import Effect.Now as Now
@@ -72,6 +72,7 @@ main = do
   log $ show now
   launchAff_ do
     runAsync
+  runAsync2
 
 runAsync :: Aff Unit
 runAsync = do
@@ -79,3 +80,12 @@ runAsync = do
   _ <- Console.log "Main Thread"
   name <- joinFiber fiberName
   Console.log ("Name: " <> name)
+
+runAsync2 :: Effect Unit
+runAsync2 = do
+  fiber1 <- launchAff $ async "Name1"
+  fiber2 <- launchAff $ async "Name2"
+  launchAff_ do
+    r1 <- joinFiber fiber1
+    r2 <- joinFiber fiber2
+    Console.log ("End: " <> r1 <> ", " <> r2)
