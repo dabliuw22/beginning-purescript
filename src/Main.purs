@@ -8,6 +8,7 @@ import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
 import Effect.Aff (Aff, forkAff, joinFiber, launchAff, launchAff_)
+import Effect.Class (liftEffect)
 import Effect.Class.Console as Console
 import Effect.Console (log)
 import Effect.Now as Now
@@ -88,4 +89,4 @@ runAsync2 = do
   launchAff_ do
     r1 <- joinFiber fiber1
     r2 <- joinFiber fiber2
-    Console.log ("End: " <> r1 <> ", " <> r2)
+    liftEffect $ log ("End: " <> r1 <> ", " <> r2)
