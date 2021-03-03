@@ -19,6 +19,7 @@ $ spago install aff
 $ spago install node-fs-aff
 $ spago install affjax
 $ spago install parallel
+$ spago install foldable-traversable
 ```
 
 ## Apply Formatter
