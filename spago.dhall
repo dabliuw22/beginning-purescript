@@ -6,6 +6,7 @@
   , "console"
   , "datetime"
   , "effect"
+  , "filterable"
   , "foldable-traversable"
   , "generics-rep"
   , "lists"
