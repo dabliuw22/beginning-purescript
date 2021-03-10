@@ -13,6 +13,7 @@ import Effect.Class.Console as Console
 import Effect.Console (log)
 import Effect.Now as Now
 import Typeclass (class Counter, count)
+import Collections (run)
 
 data Command
   = Left
@@ -74,6 +75,7 @@ main = do
   launchAff_ do
     runAsync
   runAsync2
+  run
 
 runAsync :: Aff Unit
 runAsync = do
