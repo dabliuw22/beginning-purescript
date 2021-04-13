@@ -10,3 +10,5 @@
 /.psa*
 /.spago
 .idea/
+
+.DS_Store
