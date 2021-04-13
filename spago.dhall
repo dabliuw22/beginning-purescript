@@ -8,7 +8,7 @@
   , "effect"
   , "filterable"
   , "foldable-traversable"
-  , "generics-rep"
+  , "free"
   , "lists"
   , "math"
   , "node-fs-aff"

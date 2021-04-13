@@ -14,13 +14,14 @@ $ spago install math
 $ spago install datetime
 $ spago install now
 $ spago install random
-$ spago install generics-rep
 $ spago install aff
 $ spago install node-fs-aff
 $ spago install affjax
 $ spago install parallel
 $ spago install foldable-traversable
 $ spago install filterable
+$ spago install transformers
+$ spago install free
 ```
 
 ## Apply Formatter
