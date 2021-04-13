@@ -2,9 +2,10 @@ module Main where
 
 import Prelude
 import Async (async)
+import Architecture.FreeApp as Free
 import Control.Apply (lift3)
 import Data.Generic.Rep (class Generic)
-import Data.Generic.Rep.Show (genericShow)
+import Data.Show.Generic (genericShow)
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
 import Effect.Aff (Aff, forkAff, joinFiber, launchAff, launchAff_)
@@ -76,6 +77,7 @@ main = do
     runAsync
   runAsync2
   run
+  Free.run
 
 runAsync :: Aff Unit
 runAsync = do
