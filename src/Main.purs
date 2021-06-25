@@ -42,8 +42,8 @@ type Person
     , age :: Int
     }
 
-getName :: Person -> String
-getName p = p.name
+getName :: ∀ n. { name :: String | n } -> String
+getName { name } = name
 
 showPerson :: Person -> String
 showPerson { name: n, age: a } = n <> ", " <> show a
