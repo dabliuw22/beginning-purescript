@@ -29,7 +29,7 @@ run = do
   let
     j = [ Just 1, Just 2, Just 3 ]
 
-    k = [ 2, 4, 6, 8 ]
+    k = [ 2, 4, 6, 8 ] :: Array Int
 
     l = sequence j
   log $ show l
